@@ -1,0 +1,7 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+PROJECT(harris_gpu_demo)
+FIND_PACKAGE(ArrayFire REQUIRED)
+INCLUDE_DIRECTORIES(${ArrayFire_INCLUDE_DIRS})
+ 
+ADD_EXECUTABLE(harris_gpu_demo harris_gpu_demo.cu)
+TARGET_LINK_LIBRARIES(harris_gpu_demo ${ArrayFire_LIBRARIES} )
